@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>CoffeeTech Slider</title>
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-	<script src="http://malsup.github.io/jquery.cycle.all.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  	<script src="http://malsup.github.io/jquery.cycle.all.js"></script>
 </head>
-
 <body>
 	<div id="container">
-		<h1>CoffeeTech</h1>
+	<h1>CoffeeTech</h1>
 		<div class="slider">
 			<img src="img/slide1.jpg" width="640" height="426">
 			<img src="img/slide2.jpg" width="640" height="426">
@@ -27,15 +28,14 @@
 	</div>
 
 	<script>
-		$(document).ready(function () {
-			$('.slider').cycle({
-				fx: 'shuffle',
-				pause: 1,
-				next: '#next',
-				prev: '#prev'
-			});
-		})
+	$(document).ready(function(){
+		$('.slider').cycle({
+			fx: 'turnDown',
+			pause: 1,
+			prev: '#prev',
+			next: '#next'
+		});
+	});
 	</script>
 </body>
-
 </html>
