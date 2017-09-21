@@ -1,1 +1,27 @@
-/* CSS declarations go here */
+body {
+  background: #e3e3e3;
+}
+
+.login-link-text {
+    text-decoration: none !important;
+    font-size: 25px !important;
+}
+
+hr {
+  border-color: #185f99;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  width: 50%;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+.toggle-private {
+  margin: 0 5px 0 5px !important;
+}
