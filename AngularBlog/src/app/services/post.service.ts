@@ -1,15 +1,21 @@
 import {Injectable} from '@angular/core';
-import {Post} from '../Post';
+import { Post } from '../Post';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
 
-import {POSTS} from '../mock-posts';
+// import { POSTS } from '../mock-posts';
 
 @Injectable()
-export class PostService{
-    getPosts():Promise<Post[]>{
-        return Promise.resolve(POSTS);
+export class PostService {
+    constructor(private _http: Http) {
+
     }
-    
-    addPost(post:any){
-        POSTS.push(post);
+    getPosts() {
+        return this._http.get('https://jsonplaceholder.typicode.com/posts?_limit=5').map(res => res.json());
+    }
+    addPost(post: any) {
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this._http.post('https://jsonplaceholder.typicode.com/posts', post, {headers: headers}).map(res => res.json());
     }
 }
